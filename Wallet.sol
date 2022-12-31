@@ -7,9 +7,7 @@ contract MyWallet {
 
     address myadd = msg.sender;
     uint256 Mybal;
-    address payable withadd;
-
-
+   
 
     //to give eth to address
     function ShowBalance () public payable {
@@ -32,8 +30,6 @@ contract MyWallet {
 
     // to withdraw a specific address
     function withdrawToAddress (address payable _Newadd) public { 
-        withadd = _Newadd;
-        _Newadd = payable(withadd);
         _Newadd.transfer(GetBalance());
     }
 
