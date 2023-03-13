@@ -14,7 +14,6 @@ contract MyWallet {
         Mybal += msg.value;
     }
 
-
     //to get balance
     function GetBalance () public view returns(uint) {
         return address(this).balance;
